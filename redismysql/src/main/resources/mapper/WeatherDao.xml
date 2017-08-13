@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.redisMysql.dao.WeatherDao">
+	
+	
+	<select id="getById" resultMap="Weather" parameterType="long">
+		SELECT address,now,time
+		FROM weather
+		WHEN id=#{id}
+	</select>
+	
+</mapper>
